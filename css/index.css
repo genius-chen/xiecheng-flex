@@ -20,7 +20,18 @@ ul {
     margin: 0;
     padding: 0;
 }
- /* search */
+/* backToTop */
+.goBack {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    background: url(../images/back.png) no-repeat;
+    background-size: 38px 38px;
+}
+/* search */
 .search-index {
     display: flex;
     position: fixed;
@@ -35,6 +46,7 @@ ul {
     background-color: #f6f6f6;
     border-top:1px solid #ccc;
     border-bottom:1px solid #ccc;
+    z-index: 999;
 }
 .search {
     position: relative;
@@ -45,15 +57,15 @@ ul {
     font-size: 12px;
     color:#666;
     margin:7px 10px;
-    padding-left: 5px;
+    padding-left: 25px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .search::before {
     content: "";
     position: absolute;
-    top:5px;
-    left:5px;
+    top: 5px;
+    left: 5px;
     width: 15px;
     height: 15px;
     background: url(../images/sprite.png) no-repeat -59px -279px;
@@ -76,10 +88,38 @@ ul {
     margin: 4px auto -2px;
 }
 .focus {
+    position: relative;
     padding-top: 44px;
+    overflow: hidden;
+}
+.focus ul {
+    overflow: hidden;
+    width: 500%;
+    margin-left:-100% ;
+}
+.focus ul li {
+    float: left;
+    width: 20%;
 }
 .focus img {
     width: 100%;
+}
+.focus ol {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    margin: 0;
+}
+.focus ol li {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 2px;
+    list-style: none;
+}
+.focus ol .current {
+    width: 15px;;
 }
 .local-nav {
     display: flex;

@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <title>携程</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
 </head>
 <body>
+    <!--backToTop module-->
+    <div class="goBack"></div>
     <!--search module-->
     <div class="search-index">
         <div class="search">搜索：目的地/酒店/景点/航班号</div>
@@ -15,7 +18,18 @@
     </div>
     <!--focus module-->
     <div class="focus">
-        <img src="upload/focus.jpg" alt="">
+        <ul>
+            <li><img src="upload/focus3.jpg" alt=""></li>
+            <li><img src="upload/focus.jpg" alt=""></li>
+            <li><img src="upload/focus2.jpg" alt=""></li>
+            <li><img src="upload/focus3.jpg" alt=""></li>
+            <li><img src="upload/focus.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+        </ol>
     </div>
     <!--local nav-->
     <ul class="local-nav">
